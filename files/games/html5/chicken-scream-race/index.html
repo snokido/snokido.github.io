@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!-- Mirrored from www.snokido.com/files/games/html5/chicken-scream-race/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Mar 2025 04:05:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+	<link rel="canonical" href="../../../../game/chicken-scream-race.html" />
+    <title>Chicken Scream Race</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: url('Build.jpg') center no-repeat;
+            background-size: cover;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+    <link href="TemplateData/favicon.html" rel="shortcut icon">
+    <link href="TemplateData/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="unity-desktop" id="unity-container">
+    <canvas id="unity-canvas"></canvas>
+</div>
+<div id="loading-cover" style="display:none;">
+    <div id="unity-loading-bar">
+        <div id="unity-logo">Chicken Scream Race</div>
+        <div id="unity-progress-bar-empty" style="display: none;">
+            <div id="unity-progress-bar-full"></div>
+        </div>
+        <div class="spinner"></div>
+    </div>
+</div>
+<script>
+    const buildUrl = "Build/index.html";
+    const loaderUrl = buildUrl + "/9853637125e801e9aae48e78dbbdcfca.loader.js";
+    const config = {
+        dataUrl: buildUrl + "/ca57f1bc3827875a8505fd067eab7cff.data.unityweb",
+        frameworkUrl: buildUrl + "/e2ad26c03b3473844d84e4865ba145db.framework.js.unityweb",
+        codeUrl: buildUrl + "/5e7c4605691f068abdd06ba2d159f6d0.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Cursora Labs OÜ",
+        productName: "Chicken Scream Race",
+        productVersion: "0.1b",
+        webglContextAttributes: {
+            preserveDrawingBuffer: true,
+            powerPreference: "high-performance",
+        },
+    };
+
+    const container = document.querySelector("#unity-container");
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingCover = document.querySelector("#loading-cover");
+    const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+    const progressBarFull = document.querySelector("#unity-progress-bar-full");
+    const spinner = document.querySelector('.spinner');
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+    }
+
+    config.devicePixelRatio = 1.5;
+
+    loadingCover.style.display = "";
+
+    const script = document.createElement("script");
+    script.src = loaderUrl;
+
+    var myGameInstance = null;
+    script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+            spinner.style.display = "none";
+            progressBarEmpty.style.display = "";
+            progressBarFull.style.width = `${100 * progress}%`;
+        }).then((unityInstance) => {
+            myGameInstance = unityInstance;
+            loadingCover.style.display = "none";
+            //document.body.style.background = "none";
+            // Now that Unity is fully loaded, it's safe to interact with it
+            //checkDevice(); // Ensure this function is called here
+        }).catch((message) => {
+            alert(message);
+        });
+    };
+
+    document.body.appendChild(script);
+</script>
+<script src="js/rhmApi.js" type="text/javascript"></script>
+</body>
+
+<!-- Mirrored from www.snokido.com/files/games/html5/chicken-scream-race/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Mar 2025 04:05:12 GMT -->
+</html>

@@ -1,0 +1,131 @@
+/* USER ICONS */
+[class^="msg_"]{font-family:'icons' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;color:#888}
+.msg_users:before{content:"\e902"}
+.msg_delete:before{content:"\e904"}
+.msg_read:before,.msg_new:before,.msg_send:before{content:"\e905"}
+.msg_yes:before{content:"\e908"}
+.msg_no:before{content:"\e909"}
+.msg_edit:before{content:"\e90a"}
+.msg_reply:before{content:"\e90b"}
+.msg_lock:before{content:"\e915"}
+.msg_stats:before{content:"\e916"}
+
+.msg_users,.msg_delete{cursor:pointer;font-size:20px}
+.msg_read,.msg_new{cursor:pointer;font-size:28px}
+.msg_read{color:#ccc}
+.msg_delete:hover,.msg_send:hover{color:#444}
+.msg_edit{font-size:17px}
+.msg_no,.msg_yes,.msg_send{font-size:25px}
+.msg_new{color:#49b}
+.msg_no{color:#c55}
+.msg_yes{color:#8a3}
+.msg_lock{font-size:16px}
+.msg_stats{font-size:14px;padding:0 6px 2px 3px}
+
+/* USER MENU */
+.usermenu{border-right:solid 1px #ddd}
+.usermenu .usernav a{width:200px;font-size:15px;background-color:#f5f5f5;line-height:66px;border-color:#ddd}
+.usermenu .usernav a:hover{background-color:#fff}
+.usermenu .usernav:last-child{border-bottom:0}
+.usernav .icon-arrow{font-size:14px;color:#777;margin-top:3px}
+
+/* USER PAGE */
+.usercat{display:flex;justify-content:space-between;background-color:#fff}
+.usermain{display:flex;background-color:#f5f5f5}
+.user_content{position:relative;display:flex;flex-grow:1;padding:16px 18px;background:#eee}
+.user_avatar{overflow:hidden;border-radius:10px;padding:14px;background:#fff;border:solid 1px #d1d1d1}
+.user_avatar img{border-radius:5px}
+.user_infos{position:relative;margin-left:15px}
+.user_name{font-size:21px;padding-bottom:9px}
+.user_detail ul{width:200px;float:left;margin:0 10px;border-bottom:solid 1px #fafafa}
+.user_detail li{padding-top:2px;line-height:26px;border-bottom:solid 1px #ccc;border-top:solid 1px #fafafa}
+.user_detail li:first-child{border-top:0}
+.user_detail a{font-weight:500}
+.user_btn{display:flex;flex-direction:column;padding:30px 20px 0 20px}
+.user_btn button{margin:5px 0;padding:7px 15px 8px 10px;display:flex;align-items:center;font-size:13px}
+.user_btn button span:first-child{color:#aaa;margin-right:8px}
+.user_req,.user_req:hover{cursor:default;background:#ddd}
+.user_req span,.user_req:hover span{color:#888}
+.kara{text-indent:20px;background:url("images/price.png") 0 8px no-repeat}
+.user_save{width:100%;margin-top:6px;padding:6px 15px;font-size:14px;background-color:#333}
+
+/* LEVEL XP */
+.user_stats{display:flex;font-weight:700;margin-right:6px}
+.userlvl{flex:1;padding:5px 0 10px 10px}
+.xp_bar{overflow:hidden;width:100%;line-height:25px;border-radius:4px;background-color:#333}
+.lvl{width:73px;height:66px;line-height:66px;color:#000;font-size:18px;text-align:center}
+.no{background:url("images/levels.png") left top no-repeat}
+.bronze{background:url("images/levels.png") left -68px no-repeat}
+.silver{background:url("images/levels.png") left -136px no-repeat}
+.gold{background:url("images/levels.png") left -204px no-repeat}
+.max{background:url("images/levels.png") left bottom no-repeat;color:#fc0;font-size:15px}
+
+/* USER EDIT */
+.user_edit{margin-left:20px;width:250px}
+.user_edit div{position:relative;padding:8px 0 8px 0;white-space:nowrap;border-bottom:solid 1px #ccc;border-top:solid 1px #fafafa}
+.user_edit div:first-child{border-top:0}
+.user_edit div:nth-child(4){border-bottom:0}
+.user_edit input{vertical-align:middle;outline:none}
+.user_edit .form_smallput{width:100%;max-width:100%}
+.snokies{display:flex;justify-content:center;flex-wrap:wrap;padding-top:15px}
+.avatar{display:block;padding:10px;margin:0 8px 15px 8px;border-radius:8px;background:#fff;border:solid 1px #ccc;box-shadow:0 0 4px rgba(0,0,0,0.1)}
+.avatar:hover{background-color:#393939;border-color:#111}
+.avatar:hover .unlock{background-color:#222;border:solid 1px #000;color:#eee}
+.avatar img{margin-bottom:5px}
+.use{line-height:22px;border-radius:3px;color:#fff;border:solid 1px #7a3;background:#7a3}
+.unlock{border-radius:3px;color:#333;border:solid 1px #bbb;background-color:#ddd}
+.unlock span{background:url("images/price.png") left 1px no-repeat;font-weight:500;line-height:22px;padding:0 18px}
+
+/* USER MESSAGES */
+.usermess{display:flex;justify-content:flex-start;align-items:center;padding-right:10px;background-color:#f6f6f6;border-bottom:solid 1px #ccc;border-top:solid 1px #fff}
+.usermess div{padding:8px 10px;white-space:nowrap}
+.usermess:hover{background:#fff}
+.usersender{flex-grow:1;cursor:pointer;overflow:hidden;text-overflow:ellipsis;font-size:14px;border-left:solid 1px #ccc}
+.userdate{border-right:solid 1px #ccc;font-size:12px}
+
+/* USER FRIENDS */
+.addhead{display:flex;justify-content:flex-start;align-items:center;padding: 8px 10px;background-color:#ddd;border-bottom:dotted 1px #bbb;border-top:dotted 1px #aaa}
+.addhead h2{font-size:15px;color:#555;font-weight:500}
+.addput{width:180px;height:29px;border:1px solid #aaa;margin-left:15px;padding:8px;color:#666;background:#eee}
+.addput::placeholder{color:#777}
+.addsubmit{line-height:24px;padding:0 10px;margin-left:15px}
+.friend_container{display:flex;align-items:center;border-bottom:solid 1px #ccc;border-top:solid 1px #fff;background-color:#f6f6f6}
+.friend_container button{padding:0 16px;border-left:solid 1px #ccc}
+.friend_avatar{padding:13px 25px 13px 13px;background:url("images/tooltip.png") 5px 5px no-repeat}
+.friend_avatar img{border:solid 1px #333}
+.friend_username{flex-grow:1}
+.friend_username span{font-size:12px}
+.friend_username a{font-weight:700;font-size:15px}
+.friend_username .locked{color:#c55}
+.friend_request{text-indent:10px;line-height:35px;color:#fff;font-size:16px;font-weight:500;background:#c55}
+.friend_accept{margin-right:20px;font-weight:700;color:#8a3}
+.newfr{border-bottom:solid 7px #c55;border-left:solid 7px #c55;border-right:solid 7px #c55}
+
+/* USER FAV */
+.capfav{padding:14px;margin:0 0 10px 11px;border-radius:6px}
+.delfav{display:block;opacity:0;position:absolute;bottom:0;right:0;padding:5px;color:#999;border-top-left-radius:7px;background-color:#f9f9f9;transition:0.2s ease}
+.capfav:hover .delfav{opacity:1}
+.capfav .icon-flash{width:18px;font-size:18px;padding:5px;left:2px;bottom:2px;border-top-right-radius:5px;background-color:#f9f9f9;}
+
+/* FORMULAIRE */
+.form_miniput{width:40px;border:solid 1px #ccc;padding:3px 6px}
+.form_smallput{max-width:170px;border:solid 1px #ccc;padding:5px 6px}
+.editconfirm, .editerror{width:100%;border-radius:6px;padding:10px 15px;text-align:center;color:#fff;font-size:15px}
+.editconfirm{background:#7a3}
+.editerror{background:#a22}
+
+/* POPUP */
+.pm_icon{display:flex;justify-content:flex-start;background-color:#ddd;border-bottom:solid 1px #bbb}
+.pm_icon button:hover{background-color:#eee}
+.pm_icon span{padding-right:5px}
+.pm_icon button{display:flex;justify-content:flex-start;align-items:center}
+.pm_icon .msg_delete,.pm_icon .msg_reply,.pm_icon .msg_lock{font-size:17px}
+.pm{padding:7px 7px 7px 10px;border-right:solid 1px #bbb;color:#666;font-weight:500}
+.pm_sender{font-size:15px}
+.pm_info{margin-top:5px;padding:5px 0 20px 0;border-bottom:solid 1px #ccc}
+.pm_info span{padding-left:5px}
+.pm_message{padding:10px 10px 20px 10px}
+#snokies{flex:1;background-color:#eee;text-align:center;font-size:15px;padding:10px 15px}
+#snokies img{margin:10px 0;border-radius:10px}
+.snokinfos{display:flex;justify-content:center;align-items:center;flex-wrap:wrap}
+.snokinfos form{padding-left:25px;overflow:hidden;text-align:left;line-height:20px}
